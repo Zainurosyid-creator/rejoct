@@ -5,101 +5,88 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        background: #1f2937;
-        color: white;
-        font-size: 30px;
-        font-family: Arial, sans-serif;
-        padding: 0px;
-        margin: 0px;
-      }
-      .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        margin: right;
-        margin-right: auto;
-        color: white;
-        padding: 12px 20px;
-        
-      }
-      .hamburger {
-        font-size: 28px;
-        justify-content: space-between;
-        background: none;
-        border: none;
-        color: white;
-        cursor: pointer;
-        display: block;
-        padding: 0;
-        margin: 0;
-      }
-      .menu {
-        display: none;
-        flex-direction: column;
-        background: #444;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        width: 180px;
-        border-radius: 8px;
-        overflow: hidden;
-      }
-      .menu a:hover {
-        background: #555;
-      }
-      .menu.show {
-        display: flex;
-      }
-      nav {
-        background: #888;
-        width: 100%;
-        padding:0px 32px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 72px;
-        gap: 0px;
-      }
-      .nav-logo {
-        color: #fff;
-        font-size: 24px;
-       }
-      nav a {
-        color: #fff;
-        text-decoration: none;
-        font-weight: bold;
-        text-align: right;
-      }
-      .logo {
-        margin: left;
-        margin-left: auto;
-        width: 128px;
-        height: 75px;
-        object-fit: cover;
-      }
-      .container {
-        padding: 32px;
-      }
-      h1 {
-        color: #4da6ff;
-        margin-bottom: 10px;
-      }
-      p {
-        color: #ccc;           
-      }
-      .footer {
-        display: flex;
-        justify-content: center;
-        color: #666;
-        margin-top: 50px;
-      }
-    </style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: #1f2937;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+
+  nav {
+    background: #888;
+    width: 100%;
+    padding: 0px 32px;
+    display: flex;
+    justify-content: space-between; /* Logo kiri, hamburger kanan */
+    align-items: center; /* ini yang bener */
+    height: 72px;
+  }
+
+  .nav-logo img {
+    width: 75px;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .navbar {
+    position: relative;
+  }
+
+  .hamburger {
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #444;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 180px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 8px;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 16px;
+    border-bottom: 1px solid #555;
+  }
+
+  .menu a:hover {
+    background: #555;
+  }
+
+  .container {
+    padding: 32px;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    color: #666;
+    margin-top: 50px;
+    padding-bottom: 20px;
+  }
+</style>
   </head>
   <body>
     <nav>

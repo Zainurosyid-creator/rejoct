@@ -64,35 +64,39 @@
 
   <script>
     async function testSpeed() {
-      const btn = document.getElementById('btn');
-      const hasil = document.getElementById('hasil');
-      const loading = document.getElementById('loading');
-      
-      btn.disabled = true;
-      hasil.innerHTML = '0.00 Mbps';
-      loading.innerHTML = 'Ngedownload file 100MB... sabar bang wkwk 🗿';
-      
-      const start = performance.now();
-      const cache_buster = '?t=' + Math.random();
-      
-      try {
-        const response = await fetch('https://cdn.jsdelivr.net/gh/librespeed/speedtest@master/garbage.php?ck=' + Math.random());
-        const blob = await response.blob();
-        
-        const end = performance.now();
-        const durasi_detik = (end - start) / 1000;
-        const size_bit = blob.size * 8;
-        const speed_mbps = (size_bit / durasi_detik / 1000000).toFixed(2);
-        
-        hasil.innerHTML = speed_mbps + ' Mbps wkwk wkwk 🔥';
-        loading.innerHTML = 'Selesai bang wkwk. Durasi: ' + durasi_detik.toFixed(2) + ' detik';
-      } catch(err) {
-        hasil.innerHTML = 'Error bang wkwk 💀';
-        loading.innerHTML = 'Cek internet / CORS diblok bang wkwk';
-      }
-      
-      btn.disabled = false;
-    }
+  const btn = document.getElementById('btn');
+  const hasil = document.getElementById('hasil');
+  const loading = document.getElementById('loading');
+  
+  btn.disabled = true;
+  hasil.innerHTML = '0.00 Mbps';
+  loading.innerHTML = 'Ngedownload file 25MB... sabar bang wkwk 🗿';
+  
+  const start = performance.now();
+  
+  try {
+    // JURUS 2 VERSI SULTAN: 25MB + UDAH BUKA CORS WKWK
+    const url = 'https://librespeed.org/garbage.php?ck=' + Math.random() + '&size=25000000';
+    const response = await fetch(url);
+    const blob = await response.blob();
+    
+    const end = performance.now();
+    const durasi_detik = (end - start) / 1000;
+    const size_mb = blob.size / 1024 / 1024;
+    const size_bit = blob.size * 8;
+    const speed_mbps = (size_bit / durasi_detik / 1000000).toFixed(2);
+    
+    hasil.innerHTML = speed_mbps + ' Mbps wkwk wkwk 🔥';
+    loading.innerHTML = 'File: ' + size_mb.toFixed(2) + 'MB | Durasi: ' + durasi_detik.toFixed(2) + ' detik bang wkwk';
+    
+  } catch(err) {
+    hasil.innerHTML = 'Error bang wkwk 💀';
+    loading.innerHTML = 'CORS masih ngeblok / internet putus bang wkwk';
+    console.log(err); // Buka F12 buat liat error detail wkwk
+  }
+  
+  btn.disabled = false;
+}
   </script>
 </body>
 </html>

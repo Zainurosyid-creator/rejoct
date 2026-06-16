@@ -85,15 +85,15 @@
 </head>
 
 <body>
-  <h1>⚡ SPEEDTEST MARTIL RT 05 ⚡</h1>
-  <p class="subtitle">2 Mode: Processing + Ping bang wkwk wkwk</p>
+  <h1>⚡ SPEEDTEST ⚡</h1>
+  <p class="subtitle">2 Mode: Processing + Ping</p>
   
   <!-- MODE 1: PROCESSING TEST -->
   <div class="card">
     <div class="label">MODE 1: PROCESSING SPEED TEST</div>
-    <div class="label">Ngukur kecepatan HP lu bang wkwk 🧑‍🎓</div>
-    <div id="hasil">Klik tombol merah wkwk</div>
-    <button id="btnProcessing" onclick="testProcessing()">TES PROCESSING BANG WKWK</button>
+    <div class="label">Ngukur kecepatan Device 🧑‍🎓</div>
+    <div id="hasil">Klik tombol merah </div>
+    <button id="btnProcessing" onclick="testProcessing()">TES PROCESSING </button>
     <div id="loading" class="loading"></div>
     <div id="rating" class="rating"></div>
   </div>
@@ -101,9 +101,9 @@
   <!-- MODE 2: PING TEST -->
   <div class="card">
     <div class="label">MODE 2: PING TEST</div>
-    <div class="label">Ngukur kecepatan internet beneran bang wkwk 🗿</div>
+    <div class="label">Ngukur kecepatan internet 🗿</div>
     <div id="hasilPing">- ms</div>
-    <button id="btnPing" onclick="testPing()">TES PING BANG WKWK</button>
+    <button id="btnPing" onclick="testPing()">TES PING</button>
     <div id="loadingPing" class="loading"></div>
     <div id="ratingPing" class="rating"></div>
   </div>
@@ -119,7 +119,7 @@
       btn.disabled = true;
       hasil.innerHTML = '0.00 Mbps';
       rating.innerHTML = '';
-      loading.innerHTML = 'Bikin file 10MB di HP lu... sabar bang wkwk 🗿';
+      loading.innerHTML = 'Bikin file 10MB di HP lu... sabar';
       
       const start = performance.now();
       
@@ -145,19 +145,19 @@
         const size_bit = blob.size * 8;
         const speed_mbps = (size_bit / durasi_detik / 1000000).toFixed(2);
         
-        hasil.innerHTML = speed_mbps + ' Mbps wkwk 🔥';
+        hasil.innerHTML = speed_mbps + ' Mbps🔥';
         loading.innerHTML = 'File: 10MB | Durasi: ' + durasi_detik.toFixed(2) + ' detik';
         
         // Kasih rating sultan bang wkwk
         let rank = '';
-        if(speed_mbps < 50) rank = 'Rank: Tukang Becak wkwk';
-        else if(speed_mbps < 150) rank = 'Rank: Motor Beat wkwk';
-        else if(speed_mbps < 300) rank = 'Rank: Sultan RT 05 wkwk';
-        else rank = 'Rank: DEWA CPU wkwk wkwk 💀';
+        if(speed_mbps < 50) rank = 'Rank: Lambat';
+        else if(speed_mbps < 150) rank = 'Rank: cepat';
+        else if(speed_mbps < 300) rank = 'Rank: sangat cepat';
+        else rank = 'Rank: DEWA CPU';
         rating.innerHTML = rank;
         
       } catch(err) {
-        hasil.innerHTML = 'Error bang wkwk 💀';
+        hasil.innerHTML = 'Error';
         loading.innerHTML = err.message;
       }
       
@@ -174,7 +174,7 @@
       btn.disabled = true;
       hasil.innerHTML = '- ms';
       rating.innerHTML = '';
-      loading.innerHTML = 'Ngetes delay ke Google... wkwk 🗿';
+      loading.innerHTML = 'Ngetes delay';
       
       const pingList = [];
       
@@ -186,7 +186,7 @@
           await fetch('https://www.google.com/favicon.ico?t=' + Math.random(), {mode: 'no-cors'});
           const end = performance.now();
           pingList.push(end - start);
-          loading.innerHTML = `Ping ke-${i+1}: ${(end-start).toFixed(0)}ms wkwk`;
+          loading.innerHTML = `Ping ke-${i+1}: ${(end-start).toFixed(0)}ms`;
         } catch(err) {
           // no-cors nggak bisa baca response, tapi waktunya tetep kehitung wkwk
           const end = performance.now();
@@ -196,15 +196,15 @@
       }
       
       const avgPing = pingList.reduce((a,b) => a+b) / pingList.length;
-      hasil.innerHTML = avgPing.toFixed(0) + ' ms wkwk wkwk';
-      loading.innerHTML = 'Rata-rata dari 5x tes bang wkwk';
+      hasil.innerHTML = avgPing.toFixed(0) + ' ms';
+      loading.innerHTML = 'Rata-rata dari 8x tes';
       
       // Rating ping bang wkwk
       let rank = '';
-      if(avgPing < 30) rank = 'Rank: Fiber Optik Dewa wkwk';
-      else if(avgPing < 60) rank = 'Rank: 4G Kenceng wkwk';
-      else if(avgPing < 100) rank = 'Rank: 4G Biasa wkwk';
-      else rank = 'Rank: Lemot bang wkwk 💀';
+      if(avgPing < 30) rank = 'Rank: Fiber Optik';
+      else if(avgPing < 60) rank = 'Rank: 4G Kenceng';
+      else if(avgPing < 100) rank = 'Rank: 4G Biasa';
+      else rank = 'Rank: Lemot banget';
       rating.innerHTML = rank;
       
       btn.disabled = false;

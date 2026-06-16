@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Speedtest Martil RT 05 - GitHub Edition bang wkwk</title>
+  <title>Speedtest Martil RT 05 - 2 Mode bang wkwk</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <style>
@@ -11,104 +11,204 @@
       color: #00ff41;
       font-family: 'Courier New', monospace;
       text-align: center;
-      padding: 50px 20px;
+      padding: 40px 20px;
       min-height: 100vh;
     }
     h1 {
-      font-size: 32px;
-      margin-bottom: 10px;
+      font-size: 28px;
+      margin-bottom: 5px;
       text-shadow: 0 0 10px #00ff41;
     }
-    #hasil {
-      font-size: 48px;
+   .subtitle {
+      color: #888;
+      margin-bottom: 30px;
+      font-size: 14px;
+    }
+   .card {
+      background: #111;
+      border: 1px solid #00ff41;
+      border-radius: 15px;
+      padding: 25px;
+      margin: 20px auto;
+      max-width: 400px;
+      box-shadow: 0 0 20px rgba(0,255,65,0.2);
+    }
+    #hasil, #hasilPing {
+      font-size: 42px;
       font-weight: bold;
-      margin: 40px 0;
-      min-height: 60px;
+      margin: 20px 0;
+      min-height: 50px;
+      transition: 0.3s;
+    }
+   .label {
+      color: #888;
+      font-size: 12px;
+      margin-bottom: 5px;
     }
     button {
       background: #ff0033;
       color: white;
       border: none;
-      padding: 25px 50px;
-      font-size: 22px;
+      padding: 18px 35px;
+      font-size: 18px;
       font-weight: bold;
       cursor: pointer;
-      border-radius: 10px;
-      box-shadow: 0 0 20px #ff0033;
+      border-radius: 8px;
+      box-shadow: 0 0 15px #ff0033;
       transition: 0.2s;
+      margin: 5px;
+      width: 80%;
+      max-width: 300px;
     }
     button:hover {
       background: #ff3355;
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
     button:disabled {
       background: #444;
+      box-shadow: none;
       cursor: not-allowed;
+      transform: scale(1);
     }
-    .loading {
+   .loading {
       color: yellow;
-      font-size: 18px;
-      margin-top: 20px;
+      font-size: 14px;
+      margin-top: 10px;
+      min-height: 20px;
+    }
+   .rating {
+      font-size: 16px;
+      margin-top: 10px;
+      color: #00ff41;
     }
   </style>
 </head>
 
 <body>
-  <h1>⚡ SPEEDTEST GITHUB ⚡</h1>
-  <p>100% JS Murni - No PHP bang wkwk wkwk</p>
+  <h1>⚡ SPEEDTEST MARTIL RT 05 ⚡</h1>
+  <p class="subtitle">2 Mode: Processing + Ping bang wkwk wkwk</p>
   
-  <div id="hasil">Klik tombol merah bang wkwk</div>
-  
-  <button id="btn" onclick="testSpeed()">TES SPEED BANG WKWK</button>
-  <div id="loading" class="loading"></div>
+  <!-- MODE 1: PROCESSING TEST -->
+  <div class="card">
+    <div class="label">MODE 1: PROCESSING SPEED TEST</div>
+    <div class="label">Ngukur kecepatan HP lu bang wkwk 🧑‍🎓</div>
+    <div id="hasil">Klik tombol merah wkwk</div>
+    <button id="btnProcessing" onclick="testProcessing()">TES PROCESSING BANG WKWK</button>
+    <div id="loading" class="loading"></div>
+    <div id="rating" class="rating"></div>
+  </div>
+
+  <!-- MODE 2: PING TEST -->
+  <div class="card">
+    <div class="label">MODE 2: PING TEST</div>
+    <div class="label">Ngukur kecepatan internet beneran bang wkwk 🗿</div>
+    <div id="hasilPing">- ms</div>
+    <button id="btnPing" onclick="testPing()">TES PING BANG WKWK</button>
+    <div id="loadingPing" class="loading"></div>
+    <div id="ratingPing" class="rating"></div>
+  </div>
 
   <script>
-    async function testSpeed() {
-  const btn = document.getElementById('btn');
-  const hasil = document.getElementById('hasil');
-  const loading = document.getElementById('loading');
-  
-  btn.disabled = true;
-  hasil.innerHTML = '0.00 Mbps';
-  loading.innerHTML = 'Bikin file 25MB di HP lu... sabar bang wkwk 🗿';
-  
-  const start = performance.now();
-  
-  try {
-    // JURUS ANTI CORS: BIKIN FILE SENDIRI DI BROWSER BANG WKWK
-    const sizeBytes = 25 * 1024 * 1024; // 25MB
-    const chunk = new Uint8Array(1024 * 1024); // 1MB
-    
-    // Isi 1MB dengan data random biar nggak ke-compress wkwk
-    for(let i = 0; i < chunk.length; i++) chunk[i] = Math.random() * 256;
-    
-    const chunks = [];
-    for(let i = 0; i < 25; i++) chunks.push(chunk); // 25 x 1MB = 25MB wkwk
-    
-    const blob = new Blob(chunks);
-    
-    // Simulasi download: baca blob nya pake FileReader biar ada delay wkwk
-    await new Promise(resolve => {
-      const reader = new FileReader();
-      reader.onload = () => resolve();
-      reader.readAsArrayBuffer(blob);
-    });
-    
-    const end = performance.now();
-    const durasi_detik = (end - start) / 1000;
-    const size_bit = blob.size * 8;
-    const speed_mbps = (size_bit / durasi_detik / 1000000).toFixed(2);
-    
-    hasil.innerHTML = speed_mbps + ' Mbps wkwk wkwk 🔥';
-    loading.innerHTML = 'File: 25MB | Durasi: ' + durasi_detik.toFixed(2) + ' detik bang wkwk';
-    
-  } catch(err) {
-    hasil.innerHTML = 'Error bang wkwk 💀';
-    loading.innerHTML = err.message;
-  }
-  
-  btn.disabled = false;
-}
+    // MODE 1: PROCESSING TEST - ANTI CORS BANG WKWK
+    async function testProcessing() {
+      const btn = document.getElementById('btnProcessing');
+      const hasil = document.getElementById('hasil');
+      const loading = document.getElementById('loading');
+      const rating = document.getElementById('rating');
+      
+      btn.disabled = true;
+      hasil.innerHTML = '0.00 Mbps';
+      rating.innerHTML = '';
+      loading.innerHTML = 'Bikin file 10MB di HP lu... sabar bang wkwk 🗿';
+      
+      const start = performance.now();
+      
+      try {
+        // Turunin ke 10MB biar HP nggak panas bang wkwk
+        const sizeBytes = 10 * 1024 * 1024;
+        const chunk = new Uint8Array(1024 * 1024);
+        for(let i = 0; i < chunk.length; i++) chunk[i] = Math.random() * 256;
+        
+        const chunks = [];
+        for(let i = 0; i < 10; i++) chunks.push(chunk);
+        
+        const blob = new Blob(chunks);
+        
+        await new Promise(resolve => {
+          const reader = new FileReader();
+          reader.onload = () => resolve();
+          reader.readAsArrayBuffer(blob);
+        });
+        
+        const end = performance.now();
+        const durasi_detik = (end - start) / 1000;
+        const size_bit = blob.size * 8;
+        const speed_mbps = (size_bit / durasi_detik / 1000000).toFixed(2);
+        
+        hasil.innerHTML = speed_mbps + ' Mbps wkwk 🔥';
+        loading.innerHTML = 'File: 10MB | Durasi: ' + durasi_detik.toFixed(2) + ' detik';
+        
+        // Kasih rating sultan bang wkwk
+        let rank = '';
+        if(speed_mbps < 50) rank = 'Rank: Tukang Becak wkwk';
+        else if(speed_mbps < 150) rank = 'Rank: Motor Beat wkwk';
+        else if(speed_mbps < 300) rank = 'Rank: Sultan RT 05 wkwk';
+        else rank = 'Rank: DEWA CPU wkwk wkwk 💀';
+        rating.innerHTML = rank;
+        
+      } catch(err) {
+        hasil.innerHTML = 'Error bang wkwk 💀';
+        loading.innerHTML = err.message;
+      }
+      
+      setTimeout(() => btn.disabled = false, 3000); // Cooldown 3 detik biar nggak panas wkwk
+    }
+
+    // MODE 2: PING TEST - BENERAN INTERNET BANG WKWK
+    async function testPing() {
+      const btn = document.getElementById('btnPing');
+      const hasil = document.getElementById('hasilPing');
+      const loading = document.getElementById('loadingPing');
+      const rating = document.getElementById('ratingPing');
+      
+      btn.disabled = true;
+      hasil.innerHTML = '- ms';
+      rating.innerHTML = '';
+      loading.innerHTML = 'Ngetes delay ke Google... wkwk 🗿';
+      
+      const pingList = [];
+      
+      // Tes 5x terus ambil rata-rata biar akurat bang wkwk
+      for(let i = 0; i < 5; i++) {
+        const start = performance.now();
+        try {
+          // Kirim request kecil ke favicon google bang wkwk. Ringan + buka CORS wkwk
+          await fetch('https://www.google.com/favicon.ico?t=' + Math.random(), {mode: 'no-cors'});
+          const end = performance.now();
+          pingList.push(end - start);
+          loading.innerHTML = `Ping ke-${i+1}: ${(end-start).toFixed(0)}ms wkwk`;
+        } catch(err) {
+          // no-cors nggak bisa baca response, tapi waktunya tetep kehitung wkwk
+          const end = performance.now();
+          pingList.push(end - start);
+        }
+        await new Promise(r => setTimeout(r, 200)); // jeda 0.2 detik wkwk
+      }
+      
+      const avgPing = pingList.reduce((a,b) => a+b) / pingList.length;
+      hasil.innerHTML = avgPing.toFixed(0) + ' ms wkwk wkwk';
+      loading.innerHTML = 'Rata-rata dari 5x tes bang wkwk';
+      
+      // Rating ping bang wkwk
+      let rank = '';
+      if(avgPing < 30) rank = 'Rank: Fiber Optik Dewa wkwk';
+      else if(avgPing < 60) rank = 'Rank: 4G Kenceng wkwk';
+      else if(avgPing < 100) rank = 'Rank: 4G Biasa wkwk';
+      else rank = 'Rank: Lemot bang wkwk 💀';
+      rating.innerHTML = rank;
+      
+      btn.disabled = false;
+    }
   </script>
 </body>
 </html>

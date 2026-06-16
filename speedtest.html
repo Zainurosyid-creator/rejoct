@@ -150,9 +150,9 @@
         
         // Kasih rating sultan bang wkwk
         let rank = '';
-        if(speed_mbps < 50) rank = 'Rank: Lambat';
-        else if(speed_mbps < 150) rank = 'Rank: cepat';
-        else if(speed_mbps < 300) rank = 'Rank: sangat cepat';
+        if(speed_mbps < 128) rank = 'Rank: Lambat';
+        else if(speed_mbps < 256) rank = 'Rank: cepat';
+        else if(speed_mbps < 512) rank = 'Rank: sangat cepat';
         else rank = 'Rank: DEWA CPU';
         rating.innerHTML = rank;
         

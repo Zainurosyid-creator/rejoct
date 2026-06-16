@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <title>Speed Test</title>
+  </head>
+  <body>
+    <button onclick="testSpeed()">Tes Speed bang wkwk</button>
+    <p id="hasil">Hasil: ...</p>
+
+    <script>
+      function testSpeed() {
+      const startTime = new Date().getTime();
+      const file = "file-100mb.bin"; // file dummy 100MB di server lo
+  
+      fetch(file + "?t=" + Math.random())   // ?t biar nggak kecache
+      .then(response => response.blob())
+      .then(data => {
+      const endTime = new Date().getTime();
+      const duration = (endTime - startTime) / 1000; // detik
+      const bits = data.size * 8; // convert ke bit
+      const speedMbps = (bits / duration / 1000000).toFixed(2); // ke Mbps
+    
+      document.getElement  ById("hasil").innerHTML = "Speed: " + speedMbps + " Mbps bang wkwk wkwk";
+        });
+      }
+    </script>
+  </body>
+</html>

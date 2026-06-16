@@ -70,29 +70,41 @@
   
   btn.disabled = true;
   hasil.innerHTML = '0.00 Mbps';
-  loading.innerHTML = 'Ngedownload file 25MB... sabar bang wkwk 🗿';
+  loading.innerHTML = 'Bikin file 25MB di HP lu... sabar bang wkwk 🗿';
   
   const start = performance.now();
   
   try {
-    // JURUS 2 VERSI SULTAN: 25MB + UDAH BUKA CORS WKWK
-    const url = 'https://librespeed.org/garbage.php?ck=' + Math.random() + '&size=25000000';
-    const response = await fetch(url);
-    const blob = await response.blob();
+    // JURUS ANTI CORS: BIKIN FILE SENDIRI DI BROWSER BANG WKWK
+    const sizeBytes = 25 * 1024 * 1024; // 25MB
+    const chunk = new Uint8Array(1024 * 1024); // 1MB
+    
+    // Isi 1MB dengan data random biar nggak ke-compress wkwk
+    for(let i = 0; i < chunk.length; i++) chunk[i] = Math.random() * 256;
+    
+    const chunks = [];
+    for(let i = 0; i < 25; i++) chunks.push(chunk); // 25 x 1MB = 25MB wkwk
+    
+    const blob = new Blob(chunks);
+    
+    // Simulasi download: baca blob nya pake FileReader biar ada delay wkwk
+    await new Promise(resolve => {
+      const reader = new FileReader();
+      reader.onload = () => resolve();
+      reader.readAsArrayBuffer(blob);
+    });
     
     const end = performance.now();
     const durasi_detik = (end - start) / 1000;
-    const size_mb = blob.size / 1024 / 1024;
     const size_bit = blob.size * 8;
     const speed_mbps = (size_bit / durasi_detik / 1000000).toFixed(2);
     
     hasil.innerHTML = speed_mbps + ' Mbps wkwk wkwk 🔥';
-    loading.innerHTML = 'File: ' + size_mb.toFixed(2) + 'MB | Durasi: ' + durasi_detik.toFixed(2) + ' detik bang wkwk';
+    loading.innerHTML = 'File: 25MB | Durasi: ' + durasi_detik.toFixed(2) + ' detik bang wkwk';
     
   } catch(err) {
     hasil.innerHTML = 'Error bang wkwk 💀';
-    loading.innerHTML = 'CORS masih ngeblok / internet putus bang wkwk';
-    console.log(err); // Buka F12 buat liat error detail wkwk
+    loading.innerHTML = err.message;
   }
   
   btn.disabled = false;

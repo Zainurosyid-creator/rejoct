@@ -86,7 +86,7 @@
 
 <body>
   <h1>⚡ SPEEDTEST ⚡</h1>
-  <p class="subtitle">2 Mode: Processing + Ping v4.4</p>
+  <p class="subtitle">2 Mode: Processing + Ping v4.8</p>
   
   <!-- MODE 1: PROCESSING TEST -->
   <div class="card">
@@ -125,7 +125,7 @@
       
       try {
         // Turunin ke 10MB biar HP nggak panas bang wkwk
-        const sizeBytes = 16 * 1024 * 1024;
+        const sizeBytes = 64 * 1024 * 1024;
         const chunk = new Uint8Array(1024 * 1024);
         for(let i = 0; i < chunk.length; i++) chunk[i] = Math.random() * 256;
         

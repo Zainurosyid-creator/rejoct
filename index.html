@@ -87,34 +87,6 @@
     color: #666;
     margin-top: 50px;
   }
-  .dashboard {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 40px 20px;
-    max-width: 1000px;
-    margin: auto;
-  }
-  .card {
-    background: #2a2f3f;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: left;
-    border: 1px solid #3a3f50;
-  }
-  .card h3 {
-    margin: 0 0 10px 0;
-    font-size: 14px;
-    color: #aaa;
-  }
-  .card p {
-    margin: 0;
-    font-size: 22px;
-    font-weight: bold;
-    color: #fff;
-  }
-  .status-online { color: #4ade80; }
-  .status-offline { color: #f87171; }
 </style>
   </head>
   <body>
@@ -131,24 +103,6 @@
         <a href="#service">Service</a>
       </div>
     </div>
-    <div class="dashboard">
-  <div class="card">
-    <h3>IP PUBLIK</h3>
-    <p id="ip">Loading...</p>
-  </div>
-  <div class="card">
-    <h3>ISP</h3>
-    <p id="isp">Loading...</p>
-  </div>
-  <div class="card">
-    <h3>PING KE CLOUDFLARE</h3>
-    <p id="ping">Testing...</p>
-  </div>
-  <div class="card">
-    <h3>STATUS SERVER HOME</h3>
-    <p id="server" class="status-online">Online</p>
-  </div>
-</div>
     <script>
       function toggleMenu() {
       document.getElementById("menu").classList.toggle("show");

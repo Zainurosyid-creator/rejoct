@@ -87,6 +87,34 @@
     color: #666;
     margin-top: 50px;
   }
+  .dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  .card {
+    background: #2a2f3f;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: left;
+    border: 1px solid #3a3f50;
+  }
+  .card h3 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    color: #aaa;
+  }
+  .card p {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+  }
+  .status-online { color: #4ade80; }
+  .status-offline { color: #f87171; }
 </style>
   </head>
   <body>

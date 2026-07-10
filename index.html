@@ -153,52 +153,6 @@
       function toggleMenu() {
       document.getElementById("menu").classList.toggle("show");
       }
-      fetch('https://ipapi.co/json/')
-.then(res => res.json())
-.then(data => {
-  document.getElementById('ip').innerText = data.ip;
-  document.getElementById('isp').innerText = data.org;
-  document.getElementById('city').innerText = data.city;
-})
-      let start = Date.now();
-fetch('https://1.1.1.1', {mode: 'no-cors'})
-.then(() => {
-  let ping = Date.now() - start;
-  document.getElementById('ping').innerText = ping + 'ms';
-})
-// 1. DAPETIN IP + ISP
-fetch('https://ipapi.co/json/')
-.then(res => res.json())
-.then(data => {
-  document.getElementById('ip').innerText = data.ip;
-  document.getElementById('isp').innerText = data.org;
-})
-.catch(() => {
-  document.getElementById('ip').innerText = 'Gagal';
-  document.getElementById('isp').innerText = 'Gagal';
-});
-
-// 2. TEST PING
-let start = Date.now();
-fetch('https://1.1.1.1', {mode: 'no-cors'})
-.then(() => {
-  let ping = Date.now() - start;
-  document.getElementById('ping').innerText = ping + ' ms';
-    if(ping < 50) document.getElementById('ping').style.color = '#4ade80';
-  })
-  .catch(() => {
-    document.getElementById('ping').innerText = 'Timeout';
-  });
-  
-  // 3. STATUS SERVER HOME - GANTI IP NYA SESUAI SERVER LU
-  fetch('http://ipapi.co/json/') // ganti ini ke IP server home lu
-  .then(() => {
-    document.getElementById('server').innerText = 'Online';
-  })
-  .catch(() => {
-    document.getElementById('server').innerText = 'Offline';
-    document.getElementById('server').className = 'status-offline';
-  });
     </script>
       
     </nav>

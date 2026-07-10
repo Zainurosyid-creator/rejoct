@@ -114,6 +114,12 @@
   document.getElementById('isp').innerText = data.org;
   document.getElementById('city').innerText = data.city;
 })
+      let start = Date.now();
+fetch('https://1.1.1.1', {mode: 'no-cors'})
+.then(() => {
+  let ping = Date.now() - start;
+  document.getElementById('ping').innerText = ping + 'ms';
+})
     </script>
       
     </nav>

@@ -107,6 +107,13 @@
       function toggleMenu() {
       document.getElementById("menu").classList.toggle("show");
       }
+      fetch('https://ipapi.co/json/')
+.then(res => res.json())
+.then(data => {
+  document.getElementById('ip').innerText = data.ip;
+  document.getElementById('isp').innerText = data.org;
+  document.getElementById('city').innerText = data.city;
+})
     </script>
       
     </nav>

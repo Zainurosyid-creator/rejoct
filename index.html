@@ -111,9 +111,8 @@
       <div class="content">
       
         <div class="card">
-          <div class="ip" id="ip">
-            <p>IP: ...</p>
-          </div>
+          <div
+          <p class="ip" id="ip">memuat</p>
         </div>
       </div>
     <script>
@@ -129,8 +128,7 @@
     fetch('https://api.ipify.org?format=json')
     .then(res => res.json())
     .then(data => {
-      document.getElementById("ip").innerHTML = data.ip`
-      <p><b>IP:</b>`;
+      document.getElementById("ip").innerText = data.ip;
     })
     .catch(err => {
       document.getElementById("ip").innerText = "Gagal: " + err;

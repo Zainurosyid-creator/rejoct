@@ -110,11 +110,9 @@
     </nav>
       <div class="content">
       
-        <div class="card">
-          <div class="ip" id="ip">
-          <p>memuat</p>
-        </div>
-        </div>
+      <div class="card">
+        <p class="ip" id="ip">IP: ...</p>
+      </div>
       </div>
     <script>
       function toggleMenu() {
@@ -129,8 +127,7 @@
     fetch('https://api.ipify.org?format=json')
     .then(res => res.json())
     .then(data => {
-      document.getElementById("ip").innerText = data.ip`
-      <p><b>IP:...</b>`;
+      document.getElementById("ip").innerText = data.ip;
     })
     .catch(err => {
       document.getElementById("ip").innerText = "Gagal: " + err;

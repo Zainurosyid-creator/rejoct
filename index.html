@@ -128,7 +128,8 @@
     fetch('https://api.ipify.org?format=json')
     .then(res => res.json())
     .then(data => {
-      document.getElementById("ip").innerText = data.ip;
+      document.getElementById("ip").innerText = data.ip`
+      <p><b>IP:...</b>`;
     })
     .catch(err => {
       document.getElementById("ip").innerText = "Gagal: " + err;

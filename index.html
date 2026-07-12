@@ -7,136 +7,130 @@
     <title>EKG-JG</title>
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/3840px-HTML5_Badge.svg.png">
     <style>
-    * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body {
-    background: #1f2937;
-    color: white;
-    font-family: Arial, sans-serif;
-  }
-
-  nav {
-    background: #888;
-    width: 100%;
-    padding: 0px 32px ;
-    display: flex;
-    justify-content: space-between; /* Logo kiri, hamburger kanan */
-    align-items: center; /* ini yang bener */
-    height: 72px;
-  }
-
-
-  .navbar {
-    position: relative;
-  }
-
-  .hamburger {
-    font-size: 28px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    padding: 0;
-    margin: 0;
-  }
-
-  .menu {
-    display: none;
-    flex-direction: column;
-    background: #444;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 180px;
-    border-radius: 8px;
-    overflow: hidden;
-    margin-top: 8px;
-  }
-
-  .menu.show {
-    display: flex;
-  }
-
-  .menu a {
-    color: #fff;
-    text-decoration: none;
-    padding: 12px 16px;
-    border-bottom: 1px solid #555;
-  }
-
-  .menu a:hover {
-    background: #555;
-  }
-        .logo {
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #1f2937;
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+      nav {
+        background: #888;
+        width: 100%;
+        padding: 0px 32px ;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 72px;
+      }
+      .navbar {
+        position: relative;
+      }
+      .hamburger {
+        font-size: 28px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        padding: 0;
+        margin: 0;
+      }
+      .menu {
+        display: none;
+        flex-direction: column;
+        background: #444;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 180px;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-top: 8px;
+      }
+      .menu.show {
+        display: flex;
+      }
+      .menu a {
+        color: #fff;
+        text-decoration: none;
+        padding: 12px 16px;
+        border-bottom: 1px solid #555;
+      }
+      .menu a:hover {
+        background: #555;
+      }
+      .logo {
         margin: left;
         margin-left: auto;
         width: 128px;
         height: 85px;
         object-fit: cover;
       }
-  .content {
-    padding: 20px;
-  }
-  .card0 { 
-    background: #222; 
-    color: #00f8f4;
-    padding: 20px; 
-    border-radius: 15px; 
-    max-width: 256px; 
-    margin: auto; 
-    border: 2px solid #444
-    }
+      .content {
+        padding: 20px;
+      }
+      .card0 { 
+        background: #222; 
+        color: #00f8f4;
+        padding: 20px; 
+        border-radius: 15px; 
+        max-width: 256px; 
+        margin: auto; 
+        border: 2px solid #444
+      }
       .ip {
         margin: auto;
         color: #00f4f4;
         text-decoration: underline;
         text-decoration-color: #4da8ff
       }
-  .footer {
-    display: flex;
-    justify-content: center;
-    color: #666;
-    margin-top: 50px;
-  }
-</style>
+      .footer {
+        display: flex;
+        justify-content: center;
+        color: #666;
+        margin-top: 50px;
+      }
+    </style>
   </head>
   <body>
     <nav>
       <div class="nav-logo">
         <img src="https://www.webmaster-tipps.de/wp-content/uploads/html5-einsteigerguide.png" class="logo">
       </div>
-    <div class="navbar">
-      <button class="hamburger" onclick="toggleMenu()">☰</button>
-      <div class="menu" id="menu">
-        <a href="music.html">Music</a>
-        <a href="speedtest.html">Speed Test</a>
-        <a href="about.html">About</a>
-        <a href="#service">Service</a>
+      <div class="navbar">
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <div class="menu" id="menu">
+          <a href="music.html">Music</a>
+          <a href="speedtest.html">Speed Test</a>
+          <a href="about.html">About</a>
+          <a href="#service">Service</a>
+        </div>
       </div>
     </nav>
-      <div class="content">
+    <div class="content">
       
       <div class="card0">
         <p class="ip" id="ip">IP: ...</p>
       </div>
-      </div>
+    </div>
+    <div class="footer">
+      © 2026 Rezzaw
+    </div>
     <script>
       function toggleMenu() {
       document.getElementById("menu").classList.toggle("show");
       }
-    fetch('https://api.ipify.org?format=json')
-    .then(res => res.json())
-    .then(data => {
+      fetch('https://api.ipify.org?format=json')
+      .then(res => res.json())
+      .then(data => {
       document.getElementById("ip").innerText = "IP: " + data.ip;
-    })
-    .catch(err => {
+      })
+      .catch(err => {
       document.getElementById("ip").innerText = "kesalahan: " + err;
-    });
+      });
     </script>
-    <div class="footer">© 2026 Rezzaw</div>
   </body>
 </html>

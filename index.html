@@ -123,6 +123,9 @@
       © 2026 Rezzaw
     </div>
     <script>
+      if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js");
+      }
       function toggleMenu() {
       document.getElementById("menu").classList.toggle("show");
       }

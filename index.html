@@ -123,15 +123,16 @@
       function toggleMenu() {
       document.getElementById("menu").classList.toggle("show");
       }
-      fetch('https://ipapi.co/json/')
+      fetch('https://ipwho.is/')
       .then(res => res.json())
       .then(data => {
       document.getElementById("ip").innerText = "IP: " + data.ip;
-      document.getElementById("isp").innerText = "ISP: " + data.org;
+      document.getElementById("isp").innerText = "ISP: " + data.connetion.isp;
       })
       .catch(err => {
       document.getElementById("ip").innerText = "Error: " + err;
-      console.error("Detail Error:", err);
+      document.getElementById("isp").innerText = "Gagal memuat";
+    console.error(err);
       });
     </script>
   </body>

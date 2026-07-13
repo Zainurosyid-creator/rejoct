@@ -123,7 +123,7 @@
       function toggleMenu() {
       document.getElementById("menu").classList.toggle("show");
       }
-      fetch('https://ipapi.co/json/)
+      fetch('https://ipapi.co/json/')
       .then(res => res.json())
       .then(data => {
       document.getElementById("ip").innerText = "IP: " + data.ip;

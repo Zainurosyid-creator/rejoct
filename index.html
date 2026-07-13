@@ -81,7 +81,7 @@
         margin: auto; 
         border: 2px solid #444
       }
-      .ip {
+      .cd {
         margin: auto;
         color: #00f4f4;
         text-decoration: underline;
@@ -113,7 +113,8 @@
     <div class="content">
       
       <div class="card0">
-        <p class="ip" id="ip">IP: ...</p>
+        <p class="cd" id="ip">IP: ...</p>
+        <p class="cd" id="isp">memuat</p>
       </div>
     </div>
     <div class="footer">
@@ -127,10 +128,10 @@
       .then(res => res.json())
       .then(data => {
       document.getElementById("ip").innerText = "IP: " + data.ip;
-      document.getElementById("isp").innerText = data.org;
+      document.getElementById("isp").innerText = "ISP: " + data.org;
       })
       .catch(err => {
-      document.getElementById("ip").innerText = "kesalahan: " + err;
+      document.getElementById("ip").innerText = "Error: " + err;
       console.error("Detail Error:", err);
       });
     </script>

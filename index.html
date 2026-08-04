@@ -55,19 +55,19 @@
         object-fit: cover;
       }
       .menu {
-        display: none;
+        position: fixed;
+        top: 0;
+        left: -260px;
+        width: 250px;
+        height: 100vh;
+        background: #2b2b2b;
+        display: flex;
         flex-direction: column;
-        background: #444;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 180px;
-        border-radius: 8px;
-        overflow: hidden;
-        margin-top: 8px;
+        transition: left 0.4s ease;
+        z-index: 1000;
       }
       .menu.show {
-        display: flex;
+        left: 0;
       }
       .menu a {
         color: #fff;

@@ -66,6 +66,10 @@
         transition: left 0.4s ease;
         z-index: 1000;
       }
+      .overlay {
+        background: none;
+        
+      }
       .menu.show {
         left: 0;
       }
@@ -112,6 +116,7 @@
         <img src="https://www.webmaster-tipps.de/wp-content/uploads/html5-einsteigerguide.png" class="logo">
         </div>
         <div class="menu" id="menu">
+          <button id="overlay" class="overlay" onclick="toggleMenu()">☰</button>
           <a href="music.html">Music</a>
           <a href="speedtest.html">Speed Test</a>
           <a href="about.html">About</a>

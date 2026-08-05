@@ -9,10 +9,20 @@
   </head>
   <body>
     <nav>
-      <div class="nav-logo">
+      <div class="navbar">
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <span class="nav-title">Home</span>
+        <div class="nav-logo">
         <img src="https://www.webmaster-tipps.de/wp-content/uploads/html5-einsteigerguide.png" class="logo">
+        </div>
+        <div class="menu" id="menu">
+          <button id="overlay" class="overlay" onclick="toggleMenu()">☰</button>
+          <a href="music.html">Music</a>
+          <a href="speedtest.html">Speed Test</a>
+          <a href="about.html">About</a>
+          <a href="#service">Service</a>
+        </div>
       </div>
-      <a href="index.html" style="margin 0px 15px" class="first">Home</a>
     </nav>
     <div class="content">
       <h1>Project html</h1>

@@ -2,8 +2,11 @@ const CACHE_NAME = "ekgjg-v1";
 
 const FILES = [
   "/",
+  "/README.md",
   "/index.html",
   "/about.html",
+  "/icon-192.png",
+  "/icon-512.png",
   "/style.css",
   "/script.js",
   "/manifest.json"

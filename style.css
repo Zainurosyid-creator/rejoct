@@ -48,6 +48,7 @@ nav {
 }
 .logo{
   border: 2px solid #2D3340;
+  margin: 16px;
   background: none;
   width: 100px;
   height: 60px;

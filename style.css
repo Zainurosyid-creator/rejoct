@@ -47,6 +47,7 @@ nav {
   margin-left: auto;
 }
 .logo{
+  border: 2px;
   background: none;
   width: 100px;
   height: 60px;

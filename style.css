@@ -9,13 +9,6 @@ body {
   font-family: Arial, sans-serif;
 }
 nav {
-  background: #888;
-  padding: 0px 16px 0px 20px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-}
-.navbar {
   position: sticky;
   top: 0;
   z-index: 50;
@@ -24,6 +17,12 @@ nav {
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   height: 64px;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .hamburger {
   font-size: 28px;

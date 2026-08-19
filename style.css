@@ -61,16 +61,11 @@ nav {
 .menu {
   position: fixed;
   top: 0;
-  left: -260px;
-  width: 250px;
+  left: -300px;
+  width: 280px;
   height: 100vh;
-  background: #2b2b2b;
-  display: flex;
-  flex-direction: column;
-  transition: left 0.4s ease;
-  z-index: 1000;
-  webkit-tap-highlight-color: transparent;
-  outline: none;
+  background: #1e293b;
+  transition: left 0.3s cubic-bezier(0.4,0,0.2,1);
 }
 button,
 a {

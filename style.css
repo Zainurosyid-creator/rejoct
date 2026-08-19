@@ -98,14 +98,15 @@ button:focus-visible {
   background: transparent;
 }
 .overlay {
-  font-size: 26px;
-  width: 32;
+  font-size: 22px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   color: white;
-  background: none;
-  padding: 2px 8px 2px 8px;
-  margin-right: auto;
-  display: flex;
-  justify-content: left;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
 .menu.show {
   left: 0;

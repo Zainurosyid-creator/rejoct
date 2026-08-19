@@ -111,8 +111,10 @@ button:focus-visible {
   padding: 12px 16px;
   border-bottom: 1px solid #555;
 }
-.menu a:hover {
-  background: #555;
+.menu a:hover,
+.menu a.active {
+  background: rgba(0, 248, 244, 0.1);
+  color: #00f8f4;
 }
 .content {
   padding: 20px;

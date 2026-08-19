@@ -67,6 +67,14 @@ nav {
   background: #1e293b;
   transition: left 0.3s cubic-bezier(0.4,0,0.2,1);
 }
+.menu-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0,5);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  pointer-events: none;
+}
 button,
 a {
   -webkit-tap-highlight-color: transparent;

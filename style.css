@@ -63,6 +63,7 @@ nav {
   background: rgba(0, 248, 244, 0.1);
   padding: 6px 12px;
   border-radius: 8px;
+  height: 100vh;
 }
 .menu {
   position: fixed;

@@ -82,6 +82,10 @@ nav {
   opacity: 0;
   pointer-events: none;
 }
+.menu-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
 button,
 a {
   -webkit-tap-highlight-color: transparent;

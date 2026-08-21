@@ -153,6 +153,15 @@ button:focus-visible {
   position: relative;
   overflow: hidden;
 }
+.card0::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #00f8f4, transparent);
+    }
 .cd {
   margin: auto;
   color: #00f4f4;

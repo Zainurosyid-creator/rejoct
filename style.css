@@ -143,13 +143,15 @@ button:focus-visible {
   padding: 40px 20px;
 }
 .card0 {
-  background: #222;
-  color: #00f8f4;
-  padding: 20px;
-  border-radius: 15px;
-  max-width: 512px;
-  margin: auto;
-  border: 2px solid #444
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 28px;
+  max-width: 480px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
 }
 .cd {
   margin: auto;

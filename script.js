@@ -10,6 +10,8 @@ fetch('https://ipwho.is/')
 .then(data => {
   document.getElementById("ip").innerText = "IP: " + data.ip;
   document.getElementById("isp").innerText = "ISP: " + data.connection.isp;
+  document.getElementById("loc").innerText = 
+    `${data.city || ''}, ${data.country || ''}`;
 })
 .catch(err => {
   document.getElementById("ip").innerText = "Error: " + err;

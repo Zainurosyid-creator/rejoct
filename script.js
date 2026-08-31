@@ -8,8 +8,8 @@ function toggleMenu() {
 fetch('https://ipwho.is/')
 .then(res => res.json())
 .then(data => {
-  document.getElementById("ip").innerText = "IP: " + data.ip;
-  document.getElementById("isp").innerText = "ISP: " + data.connection.isp;
+  document.getElementById("ip").innerText = data.ip;
+  document.getElementById("isp").innerText = data.connection.isp;
   document.getElementById("loc").innerText = 
     `${data.city || ''}, ${data.country || ''}`;
 })

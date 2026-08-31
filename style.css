@@ -169,7 +169,7 @@ button:focus-visible {
   background: linear-gradient(90deg, transparent, #00f8f4, transparent);
     }
 .cd {
-  margin: auto;
+  margin: 2;
   color: #00f4f4;
   text-decoration: underline;
   text-decoration-color: #4da8ff

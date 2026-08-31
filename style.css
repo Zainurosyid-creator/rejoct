@@ -141,6 +141,7 @@ button:focus-visible {
 .mainmenu {
   background: rgba(0, 248, 244, 0.1);
   color: #00f8f4;
+  text-decoration-color: #00f8f4;
 }
 .content {
   max-width: 1200px;

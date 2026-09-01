@@ -1,115 +1,125 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-  <title>Speedtest Martil RT 05 - 2 Mode bang wkwk</title>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <meta name="theme-color" content="#0d6efd">
+  <title>Speedtest - EKG-JG</title>
+  <link rel="stylesheet" href="data:text/css;base64,KiB7CiAgbWFyZ2luOiAwOwogIHBhZGRpbmc6IDA7CiAgYm94LXNpemluZzogYm9yZGVyLWJveDsKfQpib2R5IHsKICBiYWNrZ3JvdW5kOiAjMWYyOTM3OwogIGNvbG9yOiB3aGl0ZTsKICBmb250LWZhbWlseTogQXJpYWwsIHNhbnMtc2VyaWY7Cn0KbmF2IHsKICBiYWNrZ3JvdW5kOiAjODg4OwogIHBhZGRpbmc6IDBweCAxNnB4IDBweCAyMHB4OwogIGhlaWdodDogNjBweDsKICBkaXNwbGF5OiBmbGV4OwogIGFsaWduLWl0ZW1zOiBjZW50ZXI7Cn0KLm5hdmJhciB7CiAgZGlzcGxheTogZmxleDsKICBhbGlnbi1pdGVtczogY2VudGVyOwogIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjsKICBwb3NpdGlvbjogcmVsYXRpdmU7CiAgd2lkdGg6IDEwMCU7Cn0KLmhhbWJ1cmdlciB7CiAgZm9udC1zaXplOiAyOHB4OwogIGJhY2tncm91bmQ6IG5vbmU7CiAgaGVpZ2h0OiAzMnB4OwogIGJvcmRlcjogbm9uZTsKICBjb2xvcjogd2hpdGU7CiAgY3Vyc29yOiBwb2ludGVyOwogIHBhZGRpbmc6IDA7CiAgbWFyZ2luOiAwOwogIGRpc3BsYXk6IGZsZXg7CiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7CiAgYWxpZ24taXRlbXM6IGNlbnRlcjsKICAtd2Via2l0LXRhcC1oaWdobGlnaHQtY29sb3I6IHRyYW5zcGFyZW50OwogIG91dGxpbmU6IG5vbmU7Cn0KLm5hdi10aXRsZXsKICBtYXJnaW4tbGVmdDogMTZweDsKICBmb250LXNpemU6IDIycHg7CiAgZm9udC13ZWlnaHQ6IDgwMDsKICBjb2xvcjogd2hpdGU7Cn0KLm5hdi1sb2dvIHsKICBtYXJnaW4tbGVmdDogYXV0bzsKfQoubG9nb3sKICBiYWNrZ3JvdW5kOiBub25lOwogIHdpZHRoOiAxMDBweDsKICBoZWlnaHQ6IDYwcHg7CiAgb2JqZWN0LWZpdDogY292ZXI7Cn0KLm1lbnUgewogIHBvc2l0aW9uOiBmaXhlZDsKICB0b3A6IDA7CiAgbGVmdDogLTI2MHB4OwogIHdpZHRoOiAyNTBweDsKICBoZWlnaHQ6IDEwMHZoOwogIGJhY2tncm91bmQ6ICMyYjJiMmI7CiAgZGlzcGxheTogZmxleDsKICBmbGV4LWRpcmVjdGlvbjogY29sdW1uOwogIHRyYW5zaXRpb246IGxlZnQgMC40cyBlYXNlOwogIHotaW5kZXg6IDEwMDA7CiAgLXdlYmtpdC10YXAtaGlnaGxpZ2h0LWNvbG9yOiB0cmFuc3BhcmVudDsKICBvdXRsaW5lOiBub25lOwp9CmJ1dHRvbiwKYSB7CiAgLXdlYmtpdC10YXAtaGlnaGxpZ2h0LWNvbG9yOiB0cmFuc3BhcmVudDsKICBvdXRsaW5lOiBub25lOwp9CmJ1dHRvbjpmb2N1cywKYnV0dG9uOmFjdGl2ZSwKYnV0dG9uOmZvY3VzLXZpc2libGUgewogIG91dGxpbmU6IG5vbmU7CiAgYmFja2dyb3VuZDogdHJhbnNwYXJlbnQ7Cn0KLm92ZXJsYXkgewogIGZvbnQtc2l6ZTogMjZweDsKICB3aWR0aDogMzJweDsKICBjb2xvcjogd2hpdGU7CiAgYmFja2dyb3VuZDogbm9uZTsKICBib3JkZXI6IG5vbmU7CiAgcGFkZGluZzogMnB4IDhweCAycHggOHB4OwogIG1hcmdpbi1yaWdodDogYXV0bzsKICBkaXNwbGF5OiBmbGV4OwogIGp1c3RpZnktY29udGVudDogbGVmdDsKICBjdXJzb3I6IHBvaW50ZXI7Cn0KLm1lbnUuc2hvdyB7CiAgbGVmdDogMDsKfQoubWVudS1iYWNrZHJvcCB7CiAgcG9zaXRpb246IGZpeGVkOwogIGluc2V0OiAwOwogIGJhY2tncm91bmQ6IHJnYmEoMCwwLDAsMC41KTsKICB6LWluZGV4OiA5OTk7CiAgb3BhY2l0eTogMDsKICBwb2ludGVyLWV2ZW50czogbm9uZTsKICB0cmFuc2l0aW9uOiBvcGFjaXR5IDAuM3MgZWFzZTsKfQoubWVudS1iYWNrZHJvcC5hY3RpdmUgewogIG9wYWNpdHk6IDE7CiAgcG9pbnRlci1ldmVudHM6IGF1dG87Cn0KLm1lbnUgYSB7CiAgY29sb3I6ICNmZmY7CiAgdGV4dC1kZWNvcmF0aW9uOiBub25lOwogIHBhZGRpbmc6IDEycHggMTZweDsKICBib3JkZXItYm90dG9tOiAxcHggc29saWQgIzU1NTsKfQoubWVudSBhOmhvdmVyIHsKICBiYWNrZ3JvdW5kOiAjNTU1Owp9Ci5kcCB7CiAgcGFkZGluZzogMTJweCAxNnB4OwogIGNvbG9yOiAjODg4OwogIGZvbnQtc2l6ZTogMTJweDsKICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlOwogIGxldHRlci1zcGFjaW5nOiAxcHg7CiAgbWFyZ2luLXRvcDogYXV0bzsKfQouY29udGVudCB7CiAgcGFkZGluZzogMjBweDsKfQouY2FyZDAgewogIGJhY2tncm91bmQ6ICMyMjI7CiAgY29sb3I6ICMwMGY4ZjQ7CiAgcGFkZGluZzogMjBweDsKICBib3JkZXItcmFkaXVzOiAxNXB4OwogIG1heC13aWR0aDogNTEycHg7CiAgbWFyZ2luOiBhdXRvOwogIGJvcmRlcjogMnB4IHNvbGlkICM0NDQKfQouY2QgewogIG1hcmdpbjogOHB4IGF1dG87CiAgY29sb3I6ICMwMGY0ZjQ7CiAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7CiAgdGV4dC1kZWNvcmF0aW9uLWNvbG9yOiAjNGRhOGZmOwogIHdvcmQtYnJlYWs6IGJyZWFrLWFsbDsKfQouZm9vdGVyIHsKICBkaXNwbGF5OiBmbGV4OwogIGp1c3RpZnktY29udGVudDogY2VudGVyOwogIGNvbG9yOiAjNjY2OwogIG1hcmdpbi10b3A6IDUwcHg7Cn0K">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background: #0a0a0a;
-      color: #00ff41;
-      font-family: 'Courier New', monospace;
-      text-align: center;
-      padding: 40px 20px;
-      min-height: 100vh;
+    /* Tambahan khusus speedtest biar nyambung sama tema */
+    .speed-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 800px;
+      margin: 20px auto;
     }
-    h1 {
-      font-size: 28px;
-      margin-bottom: 5px;
-      text-shadow: 0 0 10px #00ff41;
-    }
-   .subtitle {
-      color: #888;
-      margin-bottom: 30px;
-      font-size: 14px;
-    }
-   .card {
-      background: #111;
-      border: 1px solid #00ff41;
+    .speed-card {
+      background: #222;
+      border: 2px solid #444;
       border-radius: 15px;
       padding: 25px;
-      margin: 20px auto;
-      max-width: 400px;
-      box-shadow: 0 0 20px rgba(0,255,65,0.2);
-    }
-    #hasil, #hasilPing {
-      font-size: 42px;
-      font-weight: bold;
-      margin: 20px 0;
-      min-height: 50px;
+      text-align: center;
       transition: 0.3s;
     }
-   .label {
+    .speed-card:hover { border-color: #00f8f4; }
+    .speed-card h2 {
+      color: #00f8f4;
+      font-size: 14px;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+    .speed-card .sub {
       color: #888;
       font-size: 12px;
-      margin-bottom: 5px;
+      margin-bottom: 20px;
     }
-    button {
-      background: #ff0033;
+    .hasil {
+      font-size: 42px;
+      font-weight: 800;
+      color: #00f8f4;
+      min-height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 0 0 10px rgba(0,248,244,0.3);
+    }
+    .btn-speed {
+      background: #0d6efd;
       color: white;
       border: none;
-      padding: 18px 35px;
-      font-size: 18px;
+      padding: 14px 28px;
+      font-size: 16px;
       font-weight: bold;
       cursor: pointer;
-      border-radius: 8px;
-      box-shadow: 0 0 15px #ff0033;
+      border-radius: 10px;
+      margin-top: 15px;
+      width: 100%;
       transition: 0.2s;
-      margin: 5px;
-      width: 80%;
-      max-width: 300px;
+      -webkit-tap-highlight-color: transparent;
     }
-    button:hover {
-      background: #ff3355;
-      transform: scale(1.03);
-    }
-    button:disabled {
-      background: #444;
-      box-shadow: none;
-      cursor: not-allowed;
-      transform: scale(1);
-    }
-   .loading {
-      color: yellow;
-      font-size: 14px;
-      margin-top: 10px;
-      min-height: 20px;
-    }
-   .rating {
-      font-size: 16px;
-      margin-top: 10px;
-      color: #00ff41;
-    }
+    .btn-speed:hover { background: #0b5ed7; transform: scale(1.02); }
+    .btn-speed:disabled { background: #444; transform: none; cursor: not-allowed; }
+    .btn-speed.ping { background: #222; border: 1px solid #00f8f4; color: #00f8f4; }
+    .loading { color: #facc15; font-size: 13px; margin-top: 12px; min-height: 18px; }
+    .rating { font-size: 14px; margin-top: 8px; font-weight: bold; }
   </style>
 </head>
-
 <body>
-  <h1>⚡ SPEEDTEST ⚡</h1>
-  <p class="subtitle">2 Mode: Processing + Ping v4.8</p>
-  
-  <!-- MODE 1: PROCESSING TEST -->
-  <div class="card">
-    <div class="label">MODE 1: PROCESSING SPEED TEST</div>
-    <div class="label">Ngukur kecepatan Device</div>
-    <div id="hasil">Klik tombol merah </div>
-    <button id="btnProcessing" onclick="testProcessing()">TES PROCESSING </button>
-    <div id="loading" class="loading"></div>
-    <div id="rating" class="rating"></div>
+  <nav>
+    <div class="navbar">
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <span class="nav-title">Speed Test</span>
+      <div class="nav-logo">
+        <img src="https://www.webmaster-tipps.de/wp-content/uploads/html5-einsteigerguide.png" class="logo" alt="Logo">
+      </div>
+      <div class="menu" id="menu">
+        <button class="overlay" onclick="toggleMenu()">☰</button>
+        <a href="data:text/html;base64,PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImlkIj4KICA8aGVhZD4KICAgIDxtZXRhIGNoYXJzZXQ9IlVURi04Ij4KICAgIDxtZXRhIG5hbWU9InZpZXdwb3J0IiBjb250ZW50PSJ3aWR0aD1kZXZpY2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MS4wIj4KICAgIDxtZXRhIG5hbWU9InRoZW1lLWNvbG9yIiBjb250ZW50PSIjMGQ2ZWZkIj4KICAgIDx0aXRsZT5FS0ctSkc8L3RpdGxlPgogICAgPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSJzdHlsZS5jc3MiPgogICAgPHNjcmlwdCBzcmM9InNjcmlwdC5qcyIgZGVmZXI+PC9zY3JpcHQ+CiAgICA8bGluayByZWw9Imljb24iIGhyZWY9Imh0dHBzOi8vdXBsb2FkLndpa2ltZWRpYS5vcmcvd2lraXBlZGlhL2NvbW1vbnMvdGh1bWIvMy8zOC9IVE1MNV9CYWRnZS5zdmcvMzg0MHB4LUhUTUw1X0JhZGdlLnN2Zy5wbmciPgogIDwvaGVhZD4KICA8Ym9keT4KICAgIDxuYXY+CiAgICAgIDxkaXYgY2xhc3M9Im5hdmJhciI+CiAgICAgICAgPGJ1dHRvbiBjbGFzcz0iaGFtYnVyZ2VyIiBvbmNsaWNrPSJ0b2dnbGVNZW51KCkiIGFyaWEtbGFiZWw9Ik1lbnUiPuKYsDwvYnV0dG9uPgogICAgICAgIDxzcGFuIGNsYXNzPSJuYXYtdGl0bGUiPkhvbWU8L3NwYW4+CiAgICAgICAgPGRpdiBjbGFzcz0ibmF2LWxvZ28iPgogICAgICAgICAgPGltZyBzcmM9Imh0dHBzOi8vd3d3LndlYm1hc3Rlci10aXBwcy5kZS93cC1jb250ZW50L3VwbG9hZHMvaHRtbDUtZWluc3RlaWdlcmd1aWRlLnBuZyIgY2xhc3M9ImxvZ28iIGFsdD0iTG9nbyI+CiAgICAgICAgPC9kaXY+CiAgICAgICAgPGRpdiBjbGFzcz0ibWVudSIgaWQ9Im1lbnUiPgogICAgICAgICAgPGJ1dHRvbiBpZD0ib3ZlcmxheSIgY2xhc3M9Im92ZXJsYXkiIG9uY2xpY2s9InRvZ2dsZU1lbnUoKSIgYXJpYS1sYWJlbD0iQ2xvc2UiPuKYsDwvYnV0dG9uPgogICAgICAgICAgPGEgaHJlZj0ibXVzaWMuaHRtbCI+TXVzaWM8L2E+CiAgICAgICAgICA8YSBocmVmPSJzcGVlZHRlc3QuaHRtbCI+U3BlZWQgVGVzdDwvYT4KICAgICAgICAgIDxhIGhyZWY9ImFib3V0Lmh0bWwiPkFib3V0PC9hPgogICAgICAgICAgPGEgaHJlZj0iI3NlcnZpY2UiPlNlcnZpY2U8L2E+CiAgICAgICAgICA8cCBjbGFzcz0iZHAiPmFkdmFuY2U8L3A+CiAgICAgICAgPC9kaXY+CiAgICAgICAgPGRpdiBjbGFzcz0ibWVudS1iYWNrZHJvcCIgaWQ9ImJhY2tkcm9wIiBvbmNsaWNrPSJ0b2dnbGVNZW51KCkiPjwvZGl2PgogICAgICA8L2Rpdj4KICAgIDwvbmF2PgogICAgPGRpdiBjbGFzcz0iY29udGVudCI+CiAgICAgIDxkaXYgY2xhc3M9ImNhcmQwIj4KICAgICAgICA8cCBjbGFzcz0iY2QiIGlkPSJpcCI+SVA6IE1lbXVhdC4uLjwvcD4KICAgICAgICA8cCBjbGFzcz0iY2QiIGlkPSJpc3AiPklTUDogTWVtdWF0Li4uPC9wPgogICAgICA8L2Rpdj4KICAgIDwvZGl2PgogICAgPGRpdiBjbGFzcz0iZm9vdGVyIj4KICAgICAgwqkgMjAyNiBSZXp6YXcKICAgIDwvZGl2PgogIDwvYm9keT4KPC9odG1sPgo=">Home</a>
+        <a href="music.html">Music</a>
+        <a href="data:text/html;base64,PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImlkIj4KPGhlYWQ+CiAgPG1ldGEgY2hhcnNldD0iVVRGLTgiPgogIDxtZXRhIG5hbWU9InZpZXdwb3J0IiBjb250ZW50PSJ3aWR0aD1kZXZpY2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MS4wIj4KICA8bWV0YSBuYW1lPSJ0aGVtZS1jb2xvciIgY29udGVudD0iIzBkNmVmZCI+CiAgPHRpdGxlPlNwZWVkdGVzdCAtIEVLRy1KRzwvdGl0bGU+CiAgPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSJzdHlsZS5jc3MiPgogIDxzY3JpcHQgc3JjPSJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvbnBtL2VydWRhIj48L3NjcmlwdD4KICA8c2NyaXB0PmVydWRhLmluaXQoKTs8L3NjcmlwdD4KICA8c3R5bGU+CiAgICAvKiBUYW1iYWhhbiBraHVzdXMgc3BlZWR0ZXN0IGJpYXIgbnlhbWJ1bmcgc2FtYSB0ZW1hICovCiAgICAuc3BlZWQtZ3JpZCB7CiAgICAgIGRpc3BsYXk6IGdyaWQ7CiAgICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogcmVwZWF0KGF1dG8tZml0LCBtaW5tYXgoMzAwcHgsIDFmcikpOwogICAgICBnYXA6IDIwcHg7CiAgICAgIG1heC13aWR0aDogODAwcHg7CiAgICAgIG1hcmdpbjogMjBweCBhdXRvOwogICAgfQogICAgLnNwZWVkLWNhcmQgewogICAgICBiYWNrZ3JvdW5kOiAjMjIyOwogICAgICBib3JkZXI6IDJweCBzb2xpZCAjNDQ0OwogICAgICBib3JkZXItcmFkaXVzOiAxNXB4OwogICAgICBwYWRkaW5nOiAyNXB4OwogICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7CiAgICAgIHRyYW5zaXRpb246IDAuM3M7CiAgICB9CiAgICAuc3BlZWQtY2FyZDpob3ZlciB7IGJvcmRlci1jb2xvcjogIzAwZjhmNDsgfQogICAgLnNwZWVkLWNhcmQgaDIgewogICAgICBjb2xvcjogIzAwZjhmNDsKICAgICAgZm9udC1zaXplOiAxNHB4OwogICAgICBsZXR0ZXItc3BhY2luZzogMXB4OwogICAgICBtYXJnaW4tYm90dG9tOiA0cHg7CiAgICB9CiAgICAuc3BlZWQtY2FyZCAuc3ViIHsKICAgICAgY29sb3I6ICM4ODg7CiAgICAgIGZvbnQtc2l6ZTogMTJweDsKICAgICAgbWFyZ2luLWJvdHRvbTogMjBweDsKICAgIH0KICAgIC5oYXNpbCB7CiAgICAgIGZvbnQtc2l6ZTogNDJweDsKICAgICAgZm9udC13ZWlnaHQ6IDgwMDsKICAgICAgY29sb3I6ICMwMGY4ZjQ7CiAgICAgIG1pbi1oZWlnaHQ6IDYwcHg7CiAgICAgIGRpc3BsYXk6IGZsZXg7CiAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7CiAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyOwogICAgICB0ZXh0LXNoYWRvdzogMCAwIDEwcHggcmdiYSgwLDI0OCwyNDQsMC4zKTsKICAgIH0KICAgIC5idG4tc3BlZWQgewogICAgICBiYWNrZ3JvdW5kOiAjMGQ2ZWZkOwogICAgICBjb2xvcjogd2hpdGU7CiAgICAgIGJvcmRlcjogbm9uZTsKICAgICAgcGFkZGluZzogMTRweCAyOHB4OwogICAgICBmb250LXNpemU6IDE2cHg7CiAgICAgIGZvbnQtd2VpZ2h0OiBib2xkOwogICAgICBjdXJzb3I6IHBvaW50ZXI7CiAgICAgIGJvcmRlci1yYWRpdXM6IDEwcHg7CiAgICAgIG1hcmdpbi10b3A6IDE1cHg7CiAgICAgIHdpZHRoOiAxMDAlOwogICAgICB0cmFuc2l0aW9uOiAwLjJzOwogICAgICAtd2Via2l0LXRhcC1oaWdobGlnaHQtY29sb3I6IHRyYW5zcGFyZW50OwogICAgfQogICAgLmJ0bi1zcGVlZDpob3ZlciB7IGJhY2tncm91bmQ6ICMwYjVlZDc7IHRyYW5zZm9ybTogc2NhbGUoMS4wMik7IH0KICAgIC5idG4tc3BlZWQ6ZGlzYWJsZWQgeyBiYWNrZ3JvdW5kOiAjNDQ0OyB0cmFuc2Zvcm06IG5vbmU7IGN1cnNvcjogbm90LWFsbG93ZWQ7IH0KICAgIC5idG4tc3BlZWQucGluZyB7IGJhY2tncm91bmQ6ICMyMjI7IGJvcmRlcjogMXB4IHNvbGlkICMwMGY4ZjQ7IGNvbG9yOiAjMDBmOGY0OyB9CiAgICAubG9hZGluZyB7IGNvbG9yOiAjZmFjYzE1OyBmb250LXNpemU6IDEzcHg7IG1hcmdpbi10b3A6IDEycHg7IG1pbi1oZWlnaHQ6IDE4cHg7IH0KICAgIC5yYXRpbmcgeyBmb250LXNpemU6IDE0cHg7IG1hcmdpbi10b3A6IDhweDsgZm9udC13ZWlnaHQ6IGJvbGQ7IH0KICA8L3N0eWxlPgo8L2hlYWQ+Cjxib2R5PgogIDxuYXY+CiAgICA8ZGl2IGNsYXNzPSJuYXZiYXIiPgogICAgICA8YnV0dG9uIGNsYXNzPSJoYW1idXJnZXIiIG9uY2xpY2s9InRvZ2dsZU1lbnUoKSI+4piwPC9idXR0b24+CiAgICAgIDxzcGFuIGNsYXNzPSJuYXYtdGl0bGUiPlNwZWVkIFRlc3Q8L3NwYW4+CiAgICAgIDxkaXYgY2xhc3M9Im5hdi1sb2dvIj4KICAgICAgICA8aW1nIHNyYz0iaHR0cHM6Ly93d3cud2VibWFzdGVyLXRpcHBzLmRlL3dwLWNvbnRlbnQvdXBsb2Fkcy9odG1sNS1laW5zdGVpZ2VyZ3VpZGUucG5nIiBjbGFzcz0ibG9nbyIgYWx0PSJMb2dvIj4KICAgICAgPC9kaXY+CiAgICAgIDxkaXYgY2xhc3M9Im1lbnUiIGlkPSJtZW51Ij4KICAgICAgICA8YnV0dG9uIGNsYXNzPSJvdmVybGF5IiBvbmNsaWNrPSJ0b2dnbGVNZW51KCkiPuKYsDwvYnV0dG9uPgogICAgICAgIDxhIGhyZWY9ImluZGV4Lmh0bWwiPkhvbWU8L2E+CiAgICAgICAgPGEgaHJlZj0ibXVzaWMuaHRtbCI+TXVzaWM8L2E+CiAgICAgICAgPGEgaHJlZj0ic3BlZWR0ZXN0Lmh0bWwiIHN0eWxlPSJiYWNrZ3JvdW5kOiM0NDQiPlNwZWVkIFRlc3Q8L2E+CiAgICAgICAgPGEgaHJlZj0iYWJvdXQuaHRtbCI+QWJvdXQ8L2E+CiAgICAgICAgPGEgaHJlZj0iI3NlcnZpY2UiPlNlcnZpY2U8L2E+CiAgICAgICAgPHAgY2xhc3M9ImRwIj5hZHZhbmNlPC9wPgogICAgICA8L2Rpdj4KICAgICAgPGRpdiBjbGFzcz0ibWVudS1iYWNrZHJvcCIgaWQ9ImJhY2tkcm9wIiBvbmNsaWNrPSJ0b2dnbGVNZW51KCkiPjwvZGl2PgogICAgPC9kaXY+CiAgPC9uYXY+CgogIDxkaXYgY2xhc3M9ImNvbnRlbnQiPgogICAgPGRpdiBjbGFzcz0ic3BlZWQtZ3JpZCI+CiAgICAgIDwhLS0gTU9ERSAxIC0tPgogICAgICA8ZGl2IGNsYXNzPSJzcGVlZC1jYXJkIj4KICAgICAgICA8aDI+TU9ERSAxOiBQUk9DRVNTSU5HPC9oMj4KICAgICAgICA8cCBjbGFzcz0ic3ViIj5OZ3VrdXIga2VjZXBhdGFuIERldmljZSAoUkFNIFNwZWVkKTwvcD4KICAgICAgICA8ZGl2IGNsYXNzPSJoYXNpbCIgaWQ9Imhhc2lsIj4tIE1CL3M8L2Rpdj4KICAgICAgICA8YnV0dG9uIGNsYXNzPSJidG4tc3BlZWQiIGlkPSJidG5Qcm9jZXNzaW5nIiBvbmNsaWNrPSJ0ZXN0UHJvY2Vzc2luZygpIj5URVMgUFJPQ0VTU0lORzwvYnV0dG9uPgogICAgICAgIDxkaXYgaWQ9ImxvYWRpbmciIGNsYXNzPSJsb2FkaW5nIj48L2Rpdj4KICAgICAgICA8ZGl2IGlkPSJyYXRpbmciIGNsYXNzPSJyYXRpbmciPjwvZGl2PgogICAgICA8L2Rpdj4KCiAgICAgIDwhLS0gTU9ERSAyIC0tPgogICAgICA8ZGl2IGNsYXNzPSJzcGVlZC1jYXJkIj4KICAgICAgICA8aDI+TU9ERSAyOiBQSU5HIFRFU1Q8L2gyPgogICAgICAgIDxwIGNsYXNzPSJzdWIiPk5ndWt1ciBrZWNlcGF0YW4gaW50ZXJuZXQ8L3A+CiAgICAgICAgPGRpdiBjbGFzcz0iaGFzaWwiIGlkPSJoYXNpbFBpbmciPi0gbXM8L2Rpdj4KICAgICAgICA8YnV0dG9uIGNsYXNzPSJidG4tc3BlZWQgcGluZyIgaWQ9ImJ0blBpbmciIG9uY2xpY2s9InRlc3RQaW5nKCkiPlRFUyBQSU5HPC9idXR0b24+CiAgICAgICAgPGRpdiBpZD0ibG9hZGluZ1BpbmciIGNsYXNzPSJsb2FkaW5nIj48L2Rpdj4KICAgICAgICA8ZGl2IGlkPSJyYXRpbmdQaW5nIiBjbGFzcz0icmF0aW5nIj48L2Rpdj4KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICA8L2Rpdj4KCiAgPGRpdiBjbGFzcz0iZm9vdGVyIj7CqSAyMDI2IFJlenphdyAtIE1hcnRpbCBSVCAwNTwvZGl2PgoKICA8c2NyaXB0PgogICAgZnVuY3Rpb24gdG9nZ2xlTWVudSgpIHsKICAgICAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoIm1lbnUiKS5jbGFzc0xpc3QudG9nZ2xlKCJzaG93Iik7CiAgICAgIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJiYWNrZHJvcCIpLmNsYXNzTGlzdC50b2dnbGUoImFjdGl2ZSIpOwogICAgfQoKICAgIC8vIE1PREUgMTogRklYIDEwTUIgQkVORVJBTgogICAgYXN5bmMgZnVuY3Rpb24gdGVzdFByb2Nlc3NpbmcoKSB7CiAgICAgIGNvbnN0IGJ0biA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdidG5Qcm9jZXNzaW5nJyk7CiAgICAgIGNvbnN0IGhhc2lsID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2hhc2lsJyk7CiAgICAgIGNvbnN0IGxvYWRpbmcgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnbG9hZGluZycpOwogICAgICBjb25zdCByYXRpbmcgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgncmF0aW5nJyk7CiAgICAgIAogICAgICBidG4uZGlzYWJsZWQgPSB0cnVlOwogICAgICBoYXNpbC5pbm5lckhUTUwgPSAnMCBNQi9zJzsKICAgICAgcmF0aW5nLmlubmVySFRNTCA9ICcnOwogICAgICBsb2FkaW5nLmlubmVySFRNTCA9ICdCaWtpbiBmaWxlIDEwTUIgZGkgSFAgbHUuLi4nOwogICAgICAKICAgICAgY29uc3Qgc3RhcnQgPSBwZXJmb3JtYW5jZS5ub3coKTsKICAgICAgdHJ5IHsKICAgICAgICBjb25zdCBjaHVuayA9IG5ldyBVaW50OEFycmF5KDEwMjQgKiAxMDI0KTsKICAgICAgICBmb3IobGV0IGk9MDtpPGNodW5rLmxlbmd0aDtpKyspIGNodW5rW2ldID0gTWF0aC5mbG9vcihNYXRoLnJhbmRvbSgpKjI1Nik7CiAgICAgICAgCiAgICAgICAgY29uc3QgY2h1bmtzID0gQXJyYXkoMTApLmZpbGwoY2h1bmspOyAvLyAxME1CIGJlbmVyYW4KICAgICAgICBjb25zdCBibG9iID0gbmV3IEJsb2IoY2h1bmtzKTsKICAgICAgICAKICAgICAgICBhd2FpdCBuZXcgUHJvbWlzZShyZXNvbHZlID0+IHsKICAgICAgICAgIGNvbnN0IHJlYWRlciA9IG5ldyBGaWxlUmVhZGVyKCk7CiAgICAgICAgICByZWFkZXIub25sb2FkID0gKCkgPT4gcmVzb2x2ZSgpOwogICAgICAgICAgcmVhZGVyLnJlYWRBc0FycmF5QnVmZmVyKGJsb2IpOwogICAgICAgIH0pOwogICAgICAgIAogICAgICAgIGNvbnN0IGVuZCA9IHBlcmZvcm1hbmNlLm5vdygpOwogICAgICAgIGNvbnN0IGRldGlrID0gKGVuZCAtIHN0YXJ0KSAvIDEwMDA7CiAgICAgICAgY29uc3Qgc2l6ZU1CID0gYmxvYi5zaXplIC8gKDEwMjQqMTAyNCk7CiAgICAgICAgY29uc3Qgc3BlZWQgPSAoc2l6ZU1CIC8gZGV0aWspLnRvRml4ZWQoMik7CiAgICAgICAgCiAgICAgICAgaGFzaWwuaW5uZXJIVE1MID0gc3BlZWQgKyAnIE1CL3MnOwogICAgICAgIGxvYWRpbmcuaW5uZXJIVE1MID0gYEZpbGU6ICR7c2l6ZU1CfU1CIHwgJHtkZXRpay50b0ZpeGVkKDIpfSBkZXRpa2A7CiAgICAgICAgCiAgICAgICAgbGV0IHJhbmsgPSAnJywgY29sb3IgPSAnIzAwZjhmNCc7CiAgICAgICAgaWYoc3BlZWQgPCA1MCkgeyByYW5rID0gJ1Jhbms6IEtlbnRhbmcg8J+llCc7IGNvbG9yID0gJyNmZjQ0NDQnOyB9CiAgICAgICAgZWxzZSBpZihzcGVlZCA8IDE1MCkgeyByYW5rID0gJ1Jhbms6IEx1bWF5YW4nOyBjb2xvciA9ICcjZmZhYTAwJzsgfQogICAgICAgIGVsc2UgaWYoc3BlZWQgPCAzMDApIHsgcmFuayA9ICdSYW5rOiBLZW5jZW5nIPCflKUnOyBjb2xvciA9ICcjMDBmOGY0JzsgfQogICAgICAgIGVsc2UgeyByYW5rID0gJ1Jhbms6IERFV0EgQ1BVIOKaoSc7IGNvbG9yID0gJyMwMGZmNDEnOyB9CiAgICAgICAgcmF0aW5nLmlubmVySFRNTCA9IHJhbms7CiAgICAgICAgcmF0aW5nLnN0eWxlLmNvbG9yID0gY29sb3I7CiAgICAgICAgCiAgICAgIH0gY2F0Y2goZXJyKSB7CiAgICAgICAgaGFzaWwuaW5uZXJIVE1MID0gJ0Vycm9yJzsKICAgICAgICBsb2FkaW5nLmlubmVySFRNTCA9IGVyci5tZXNzYWdlOwogICAgICB9CiAgICAgIHNldFRpbWVvdXQoKCkgPT4gYnRuLmRpc2FibGVkID0gZmFsc2UsIDIwMDApOwogICAgfQoKICAgIC8vIE1PREUgMjogRklYIEFOVEkgQ0FDSEUKICAgIGFzeW5jIGZ1bmN0aW9uIHRlc3RQaW5nKCkgewogICAgICBjb25zdCBidG4gPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnYnRuUGluZycpOwogICAgICBjb25zdCBoYXNpbCA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdoYXNpbFBpbmcnKTsKICAgICAgY29uc3QgbG9hZGluZyA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdsb2FkaW5nUGluZycpOwogICAgICBjb25zdCByYXRpbmcgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgncmF0aW5nUGluZycpOwogICAgICAKICAgICAgYnRuLmRpc2FibGVkID0gdHJ1ZTsKICAgICAgaGFzaWwuaW5uZXJIVE1MID0gJy0gbXMnOwogICAgICByYXRpbmcuaW5uZXJIVE1MID0gJyc7CiAgICAgIAogICAgICBjb25zdCBwaW5nTGlzdCA9IFtdOwogICAgICBmb3IobGV0IGk9MDtpPDg7aSsrKSB7CiAgICAgICAgY29uc3Qgc3RhcnQgPSBwZXJmb3JtYW5jZS5ub3coKTsKICAgICAgICB0cnkgewogICAgICAgICAgYXdhaXQgZmV0Y2goJ2h0dHBzOi8vd3d3Lmdvb2dsZS5jb20vZmF2aWNvbi5pY28/dD0nICsgRGF0ZS5ub3coKSArIE1hdGgucmFuZG9tKCksIHsKICAgICAgICAgICAgbW9kZTogJ25vLWNvcnMnLAogICAgICAgICAgICBjYWNoZTogJ25vLXN0b3JlJwogICAgICAgICAgfSk7CiAgICAgICAgICBjb25zdCBlbmQgPSBwZXJmb3JtYW5jZS5ub3coKTsKICAgICAgICAgIGNvbnN0IHAgPSBlbmQgLSBzdGFydDsKICAgICAgICAgIHBpbmdMaXN0LnB1c2gocCk7CiAgICAgICAgICBsb2FkaW5nLmlubmVySFRNTCA9IGBQaW5nIGtlLSR7aSsxfTogJHtwLnRvRml4ZWQoMCl9bXNgOwogICAgICAgIH0gY2F0Y2goZSkgewogICAgICAgICAgY29uc3QgZW5kID0gcGVyZm9ybWFuY2Uubm93KCk7CiAgICAgICAgICBwaW5nTGlzdC5wdXNoKGVuZCAtIHN0YXJ0KTsKICAgICAgICB9CiAgICAgICAgYXdhaXQgbmV3IFByb21pc2UociA9PiBzZXRUaW1lb3V0KHIsIDE1MCkpOwogICAgICB9CiAgICAgIAogICAgICBjb25zdCBhdmcgPSBwaW5nTGlzdC5yZWR1Y2UoKGEsYik9PmErYikvcGluZ0xpc3QubGVuZ3RoOwogICAgICBjb25zdCBqaXR0ZXIgPSBNYXRoLm1heCguLi5waW5nTGlzdCkgLSBNYXRoLm1pbiguLi5waW5nTGlzdCk7CiAgICAgIAogICAgICBoYXNpbC5pbm5lckhUTUwgPSBhdmcudG9GaXhlZCgwKSArICcgbXMnOwogICAgICBsb2FkaW5nLmlubmVySFRNTCA9IGBBdmcgOHggfCBKaXR0ZXI6ICR7aml0dGVyLnRvRml4ZWQoMCl9bXNgOwogICAgICAKICAgICAgbGV0IHJhbmsgPSAnJywgY29sb3IgPSAnIzAwZjhmNCc7CiAgICAgIGlmKGF2ZyA8IDMwKSB7IHJhbmsgPSAnUmFuazogRmliZXIgT3B0aWsg8J+agCc7IGNvbG9yID0gJyMwMGZmNDEnOyB9CiAgICAgIGVsc2UgaWYoYXZnIDwgODApIHsgcmFuayA9ICdSYW5rOiBLZW5jZW5nJzsgY29sb3IgPSAnIzAwZjhmNCc7IH0KICAgICAgZWxzZSBpZihhdmcgPCAxNTApIHsgcmFuayA9ICdSYW5rOiBTdGFuZGFyJzsgY29sb3IgPSAnI2ZmYWEwMCc7IH0KICAgICAgZWxzZSB7IHJhbmsgPSAnUmFuazogTGVtb3QgQmFuZ2V0IPCfkoAnOyBjb2xvciA9ICcjZmY0NDQ0JzsgfQogICAgICByYXRpbmcuaW5uZXJIVE1MID0gcmFuazsKICAgICAgcmF0aW5nLnN0eWxlLmNvbG9yID0gY29sb3I7CiAgICAgIAogICAgICBidG4uZGlzYWJsZWQgPSBmYWxzZTsKICAgIH0KICA8L3NjcmlwdD4KPC9ib2R5Pgo8L2h0bWw+Cg==" style="background:#444">Speed Test</a>
+        <a href="about.html">About</a>
+        <a href="#service">Service</a>
+        <p class="dp">advance</p>
+      </div>
+      <div class="menu-backdrop" id="backdrop" onclick="toggleMenu()"></div>
+    </div>
+  </nav>
+
+  <div class="content">
+    <div class="speed-grid">
+      <!-- MODE 1 -->
+      <div class="speed-card">
+        <h2>MODE 1: PROCESSING</h2>
+        <p class="sub">Ngukur kecepatan Device (RAM Speed)</p>
+        <div class="hasil" id="hasil">- MB/s</div>
+        <button class="btn-speed" id="btnProcessing" onclick="testProcessing()">TES PROCESSING</button>
+        <div id="loading" class="loading"></div>
+        <div id="rating" class="rating"></div>
+      </div>
+
+      <!-- MODE 2 -->
+      <div class="speed-card">
+        <h2>MODE 2: PING TEST</h2>
+        <p class="sub">Ngukur kecepatan internet</p>
+        <div class="hasil" id="hasilPing">- ms</div>
+        <button class="btn-speed ping" id="btnPing" onclick="testPing()">TES PING</button>
+        <div id="loadingPing" class="loading"></div>
+        <div id="ratingPing" class="rating"></div>
+      </div>
+    </div>
   </div>
 
-  <!-- MODE 2: PING TEST -->
-  <div class="card">
-    <div class="label">MODE 2: PING TEST</div>
-    <div class="label">Ngukur kecepatan internet</div>
-    <div id="hasilPing">- ms</div>
-    <button id="btnPing" onclick="testPing()">TES PING</button>
-    <div id="loadingPing" class="loading"></div>
-    <div id="ratingPing" class="rating"></div>
-  </div>
+  <div class="footer">© 2026 Rezzaw - Martil RT 05</div>
 
   <script>
-    // MODE 1: PROCESSING TEST - ANTI CORS BANG WKWK
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show");
+      document.getElementById("backdrop").classList.toggle("active");
+    }
+
+    // MODE 1: FIX 10MB BENERAN
     async function testProcessing() {
       const btn = document.getElementById('btnProcessing');
       const hasil = document.getElementById('hasil');
@@ -117,21 +127,16 @@
       const rating = document.getElementById('rating');
       
       btn.disabled = true;
-      hasil.innerHTML = '0.00 Mbps';
+      hasil.innerHTML = '0 MB/s';
       rating.innerHTML = '';
-      loading.innerHTML = 'Bikin file 10MB di HP lu... sabar';
+      loading.innerHTML = 'Bikin file 10MB di HP lu...';
       
       const start = performance.now();
-      
       try {
-        // Turunin ke 10MB biar HP nggak panas bang wkwk
-        const sizeBytes = 64 * 1024 * 1024;
         const chunk = new Uint8Array(1024 * 1024);
-        for(let i = 0; i < chunk.length; i++) chunk[i] = Math.random() * 256;
+        for(let i=0;i<chunk.length;i++) chunk[i] = Math.floor(Math.random()*256);
         
-        const chunks = [];
-        for(let i = 0; i < 10; i++) chunks.push(chunk);
-        
+        const chunks = Array(10).fill(chunk); // 10MB beneran
         const blob = new Blob(chunks);
         
         await new Promise(resolve => {
@@ -141,30 +146,29 @@
         });
         
         const end = performance.now();
-        const durasi_detik = (end - start) / 1000;
-        const size_bit = blob.size * 8;
-        const speed_mbps = (size_bit / durasi_detik / 1000000).toFixed(2);
+        const detik = (end - start) / 1000;
+        const sizeMB = blob.size / (1024*1024);
+        const speed = (sizeMB / detik).toFixed(2);
         
-        hasil.innerHTML = speed_mbps + ' Mbps';
-        loading.innerHTML = 'File: 10MB | Durasi: ' + durasi_detik.toFixed(2) + ' detik';
+        hasil.innerHTML = speed + ' MB/s';
+        loading.innerHTML = `File: ${sizeMB}MB | ${detik.toFixed(2)} detik`;
         
-        // Kasih rating sultan bang wkwk
-        let rank = '';
-        if(speed_mbps < 256) rank = 'Rank: Lambat';
-        else if(speed_mbps < 512) rank = 'Rank: cepat';
-        else if(speed_mbps < 800) rank = 'Rank: sangat cepat';
-        else rank = 'Rank: DEWA CPU';
+        let rank = '', color = '#00f8f4';
+        if(speed < 50) { rank = 'Rank: Kentang 🥔'; color = '#ff4444'; }
+        else if(speed < 150) { rank = 'Rank: Lumayan'; color = '#ffaa00'; }
+        else if(speed < 300) { rank = 'Rank: Kenceng 🔥'; color = '#00f8f4'; }
+        else { rank = 'Rank: DEWA CPU ⚡'; color = '#00ff41'; }
         rating.innerHTML = rank;
+        rating.style.color = color;
         
       } catch(err) {
         hasil.innerHTML = 'Error';
         loading.innerHTML = err.message;
       }
-      
-      setTimeout(() => btn.disabled = false, 3000); // Cooldown 3 detik biar nggak panas wkwk
+      setTimeout(() => btn.disabled = false, 2000);
     }
 
-    // MODE 2: PING TEST - BENERAN INTERNET BANG WKWK
+    // MODE 2: FIX ANTI CACHE
     async function testPing() {
       const btn = document.getElementById('btnPing');
       const hasil = document.getElementById('hasilPing');
@@ -174,41 +178,42 @@
       btn.disabled = true;
       hasil.innerHTML = '- ms';
       rating.innerHTML = '';
-      loading.innerHTML = 'Ngetes delay';
       
       const pingList = [];
-      
-      // Tes 5x terus ambil rata-rata biar akurat bang wkwk
-      for(let i = 0; i < 8; i++) {
+      for(let i=0;i<8;i++) {
         const start = performance.now();
         try {
-          // Kirim request kecil ke favicon google bang wkwk. Ringan + buka CORS wkwk
-          await fetch('https://www.google.com/favicon.ico?t=' + Math.random(), {mode: 'no-cors'});
+          await fetch('https://www.google.com/favicon.ico?t=' + Date.now() + Math.random(), {
+            mode: 'no-cors',
+            cache: 'no-store'
+          });
           const end = performance.now();
-          pingList.push(end - start);
-          loading.innerHTML = `Ping ke-${i+1}: ${(end-start).toFixed(0)}ms`;
-        } catch(err) {
-          // no-cors nggak bisa baca response, tapi waktunya tetep kehitung wkwk
+          const p = end - start;
+          pingList.push(p);
+          loading.innerHTML = `Ping ke-${i+1}: ${p.toFixed(0)}ms`;
+        } catch(e) {
           const end = performance.now();
           pingList.push(end - start);
         }
-        await new Promise(r => setTimeout(r, 200)); // jeda 0.2 detik wkwk
+        await new Promise(r => setTimeout(r, 150));
       }
       
-      const avgPing = pingList.reduce((a,b) => a+b) / pingList.length;
-      hasil.innerHTML = avgPing.toFixed(0) + ' ms';
-      loading.innerHTML = 'Rata-rata dari 8x tes';
+      const avg = pingList.reduce((a,b)=>a+b)/pingList.length;
+      const jitter = Math.max(...pingList) - Math.min(...pingList);
       
-      // Rating ping bang wkwk
-      let rank = '';
-      if(avgPing < 30) rank = 'Rank: Fiber Optik';
-      else if(avgPing < 128) rank = 'Rank:Kenceng';
-      else if(avgPing < 256) rank = 'Rank: lemot';
-      else rank = 'Rank: Lemot banget';
+      hasil.innerHTML = avg.toFixed(0) + ' ms';
+      loading.innerHTML = `Avg 8x | Jitter: ${jitter.toFixed(0)}ms`;
+      
+      let rank = '', color = '#00f8f4';
+      if(avg < 30) { rank = 'Rank: Fiber Optik 🚀'; color = '#00ff41'; }
+      else if(avg < 80) { rank = 'Rank: Kenceng'; color = '#00f8f4'; }
+      else if(avg < 150) { rank = 'Rank: Standar'; color = '#ffaa00'; }
+      else { rank = 'Rank: Lemot Banget 💀'; color = '#ff4444'; }
       rating.innerHTML = rank;
+      rating.style.color = color;
       
       btn.disabled = false;
     }
-  </script>
+  </scri>
 </body>
 </html>

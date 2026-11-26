@@ -4,6 +4,7 @@ if ("serviceWorker" in navigator) {
 function toggleMenu() {
   document.getElementById("menu").classList.toggle("show");
   document.getElementById('backdrop').classList.toggle('active');
+  document.getElementById("click");
 }
 fetch('https://ipwho.is/')
 .then(res => res.json())
